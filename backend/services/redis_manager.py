@@ -11,7 +11,7 @@ from typing import Dict, List, Optional, Any
 from datetime import datetime
 from redis.commands.json.path import Path
 
-from models.resume import ResumeData, WebsiteConfig
+from backend.models.resume import ResumeData, WebsiteConfig
 
 
 # 配置日志
