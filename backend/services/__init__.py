@@ -4,8 +4,11 @@
 """
 
 from .redis_manager import RedisDataManager, KnowledgeBaseManager
+from .pdf_parser import PDFParser, PDFParseError
 
 __all__ = [
     "RedisDataManager",
-    "KnowledgeBaseManager"
+    "KnowledgeBaseManager",
+    "PDFParser",
+    "PDFParseError"
 ]
