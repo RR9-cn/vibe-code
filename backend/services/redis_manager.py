@@ -58,6 +58,12 @@ class RedisDataManager:
             resume_key = f"resume:{resume_data.id}"
             resume_dict = resume_data.model_dump()
             
+            # 转换datetime对象为ISO格式字符串
+            if 'created_at' in resume_dict:
+                resume_dict['created_at'] = resume_dict['created_at'].isoformat() if hasattr(resume_dict['created_at'], 'isoformat') else resume_dict['created_at']
+            if 'updated_at' in resume_dict:
+                resume_dict['updated_at'] = resume_dict['updated_at'].isoformat() if hasattr(resume_dict['updated_at'], 'isoformat') else resume_dict['updated_at']
+            
             # 使用RedisJSON存储结构化数据
             self.redis_client.json().set(resume_key, Path.root_path(), resume_dict)
             
@@ -320,6 +326,12 @@ class RedisDataManager:
         try:
             config_key = f"website:{website_config.id}"
             config_dict = website_config.model_dump()
+            
+            # 转换datetime对象为ISO格式字符串
+            if 'created_at' in config_dict:
+                config_dict['created_at'] = config_dict['created_at'].isoformat() if hasattr(config_dict['created_at'], 'isoformat') else config_dict['created_at']
+            if 'updated_at' in config_dict:
+                config_dict['updated_at'] = config_dict['updated_at'].isoformat() if hasattr(config_dict['updated_at'], 'isoformat') else config_dict['updated_at']
             
             # 使用RedisJSON存储配置
             self.redis_client.json().set(config_key, Path.root_path(), config_dict)

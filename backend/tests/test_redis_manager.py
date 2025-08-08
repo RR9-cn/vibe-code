@@ -8,6 +8,10 @@ import asyncio
 from datetime import datetime
 from unittest.mock import Mock, patch
 
+import sys
+import os
+sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
+
 from services.redis_manager import RedisDataManager, KnowledgeBaseManager
 from models.resume import (
     PersonalInfo,

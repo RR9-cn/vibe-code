@@ -27,7 +27,13 @@
 
 
 
-- [ ] 2.2 实现RedisStack数据管理器
+- [x] 2.2 实现RedisStack数据管理器
+
+
+
+
+
+
   - 创建RedisDataManager类，实现Redis连接和基础操作
   - 实现简历数据的JSON存储、检索和更新功能
   - 添加数据索引和搜索功能，为未来知识库扩展做准备
