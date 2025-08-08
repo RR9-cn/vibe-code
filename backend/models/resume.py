@@ -38,7 +38,7 @@ class WorkExperience(BaseModel):
     position: str = Field(..., min_length=1, max_length=100, description="职位名称")
     start_date: str = Field(..., description="开始时间")
     end_date: Optional[str] = Field(None, description="结束时间")
-    description: List[str] = Field(..., min_items=1, description="工作描述")
+    description: List[str] = Field(..., min_length=1, description="工作描述")
     technologies: Optional[List[str]] = Field(None, description="使用的技术")
 
 class Education(BaseModel):
@@ -66,11 +66,11 @@ class ResumeData(BaseModel):
     created_at: datetime = Field(default_factory=datetime.now, description="创建时间")
     updated_at: datetime = Field(default_factory=datetime.now, description="更新时间")
 
-    class Config:
-        """Pydantic配置"""
-        json_encoders = {
+    model_config = {
+        "json_encoders": {
             datetime: lambda v: v.isoformat()
         }
+    }
 
 class ColorScheme(BaseModel):
     """网站颜色方案模型"""
@@ -91,8 +91,8 @@ class WebsiteConfig(BaseModel):
     created_at: datetime = Field(default_factory=datetime.now, description="创建时间")
     updated_at: datetime = Field(default_factory=datetime.now, description="更新时间")
 
-    class Config:
-        """Pydantic配置"""
-        json_encoders = {
+    model_config = {
+        "json_encoders": {
             datetime: lambda v: v.isoformat()
         }
+    }

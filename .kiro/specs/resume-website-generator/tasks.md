@@ -11,12 +11,21 @@
   - 配置Docker Compose文件，包含RedisStack服务和应用服务
   - _需求: 需求1验收标准1, 需求2验收标准1_
 
-- [ ] 2. 数据模型和存储层实现
-- [ ] 2.1 创建Pydantic数据模型
+- [x] 2. 数据模型和存储层实现
+
+
+
+
+
+- [x] 2.1 创建Pydantic数据模型
+
+
   - 实现PersonalInfo、WorkExperience、Education、Skill等数据模型类
   - 添加数据验证规则和类型注解
   - 创建ResumeData主模型，整合所有子模型
   - _需求: 需求2验收标准1,2,3,4_
+
+
 
 - [ ] 2.2 实现RedisStack数据管理器
   - 创建RedisDataManager类，实现Redis连接和基础操作
