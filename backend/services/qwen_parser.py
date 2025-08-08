@@ -12,7 +12,7 @@ import dashscope
 from dashscope import Generation
 from pydantic import ValidationError
 
-from backend.models.resume import ResumeData, PersonalInfo, WorkExperience, Education, Skill
+from models.resume import ResumeData, PersonalInfo, WorkExperience, Education, Skill
 
 # 配置日志
 logging.basicConfig(level=logging.INFO)
@@ -121,9 +121,9 @@ class QwenResumeParser:
   ],
   "skills": [
     {{
-      "category": "技能分类（如：编程语言、框架、数据库、工具等）",
+      "category": "技能分类（请使用：编程语言、技术技能、软技能、语言 中的一个）",
       "name": "具体技能名称",
-      "level": "熟练程度（如：熟练、精通、了解）"
+      "level": "熟练程度（请使用：了解、熟练、精通、专家 中的一个，可以为空）"
     }}
   ]
 }}
@@ -199,7 +199,7 @@ class QwenResumeParser:
             personal_info_data = parsed_data.get('personal_info', {})
             personal_info = PersonalInfo(
                 name=personal_info_data.get('name', ''),
-                email=personal_info_data.get('email', ''),
+                email=personal_info_data.get('email') or None,  # 避免空字符串导致验证失败
                 phone=personal_info_data.get('phone'),
                 location=personal_info_data.get('location'),
                 summary=personal_info_data.get('summary'),
@@ -240,10 +240,51 @@ class QwenResumeParser:
             skills = []
             for skill_data in parsed_data.get('skills', []):
                 if skill_data.get('name'):
+                    # 映射中文分类到英文枚举值
+                    category_mapping = {
+                        '编程语言': 'technical',
+                        '技术技能': 'technical',
+                        '框架': 'technical',
+                        '数据库': 'technical',
+                        '工具': 'technical',
+                        '软技能': 'soft',
+                        '沟通能力': 'soft',
+                        '领导力': 'soft',
+                        '团队合作': 'soft',
+                        '语言': 'language',
+                        '外语': 'language'
+                    }
+                    
+                    # 映射中文水平到英文枚举值
+                    level_mapping = {
+                        '了解': 'beginner',
+                        '初级': 'beginner',
+                        '熟悉': 'intermediate',
+                        '熟练': 'intermediate',
+                        '精通': 'advanced',
+                        '专家': 'expert',
+                        '资深': 'expert'
+                    }
+                    
+                    category = skill_data.get('category', 'technical')
+                    level = skill_data.get('level')
+                    
+                    # 转换分类
+                    if category in category_mapping:
+                        category = category_mapping[category]
+                    elif category not in ['technical', 'soft', 'language']:
+                        category = 'technical'  # 默认为技术技能
+                    
+                    # 转换水平
+                    if level and level in level_mapping:
+                        level = level_mapping[level]
+                    elif level and level not in ['beginner', 'intermediate', 'advanced', 'expert']:
+                        level = None  # 如果不匹配，设为None
+                    
                     skill = Skill(
-                        category=skill_data.get('category', 'technical'),
+                        category=category,
                         name=skill_data.get('name', ''),
-                        level=skill_data.get('level')
+                        level=level
                     )
                     skills.append(skill)
             
