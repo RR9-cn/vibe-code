@@ -1,0 +1,186 @@
+{
+  "id": "resume_20250809_103204",
+  "personal_info": {
+    "name": "陈俊杰",
+    "email": "152677645501183294441@qq.com",
+    "phone": "15267764550118329444",
+    "location": "杭州",
+    "summary": "具有多个微服务和单体服务的开发经验。自己曾独立搭建公司的数据治理系统同时完成了多个老项目的优化和改造工作。经常阅读技术类书籍，如《深入理解Java虚拟机》和《代码整洁之道》，以拓展自己的技术知识。此外，我具备开阔的技术视野，经常浏览诸如阮一峰、酷壳等论坛，并能够将自己的理解整理成文章输出。",
+    "linkedin": "",
+    "github": "https://github.com/RR9-cn",
+    "website": "https://juejin.cn/user/2450136052270077"
+  },
+  "work_experience": [
+    {
+      "company": "浙江清大视光科技有限公司",
+      "position": "java开发工程师",
+      "start_date": "2023-03",
+      "end_date": "2023-11",
+      "description": [
+        "负责公司核心项目，saas平台(温州健康平台)，微信小程序(温州家医)的开发",
+        "协助其他项目的开发与维护，如诊疗app等项目的迭代和维护，包括与外部人员的沟通",
+        "根据用户的业务需求，推动saas平台的迭代方向，参与项目的需求分析"
+      ],
+      "technologies": [
+        "SpringBoot",
+        "MyBatis",
+        "MyBatisPlus",
+        "SpringCloud",
+        "OpenFeign",
+        "Redisson",
+        "MySQL",
+        "Redis",
+        "RabbitMQ"
+      ]
+    },
+    {
+      "company": "温州市鹿城区中津科技研究院",
+      "position": "java开发工程师",
+      "start_date": "2022-02",
+      "end_date": "2023-03",
+      "description": [
+        "搭建大数据治理平台，为公司其他项目提供数据服务",
+        "协助其余项目开发，精准教学和数据大屏等项目已在多个学校落地",
+        "对教育局和学校的用户提供技术支持"
+      ],
+      "technologies": [
+        "SpringBoot",
+        "MyBatis",
+        "ClickHouse",
+        "Redis",
+        "MySQL"
+      ]
+    },
+    {
+      "company": "数字东阳技术运营有限公司",
+      "position": "java开发工程师（全时实习）",
+      "start_date": "2021-03",
+      "end_date": "2022-01",
+      "description": [
+        "数据收集平台开发",
+        "数据大屏开发，协助东阳数据局大数据治理",
+        "对东阳政府各部门提供技术支持和数据收集"
+      ],
+      "technologies": [
+        "SpringBoot",
+        "MyBatis",
+        "MySQL",
+        "Redis"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "浙江广厦建设职业技术大学",
+      "degree": "本科",
+      "major": "软件工程",
+      "start_date": "2022-02",
+      "end_date": "2022-02",
+      "gpa": ""
+    }
+  ],
+  "skills": [
+    {
+      "category": "technical",
+      "name": "Java",
+      "level": "advanced"
+    },
+    {
+      "category": "technical",
+      "name": "JVM内存模型",
+      "level": "beginner"
+    },
+    {
+      "category": "technical",
+      "name": "JVM调优",
+      "level": "intermediate"
+    },
+    {
+      "category": "technical",
+      "name": "MySQL",
+      "level": "intermediate"
+    },
+    {
+      "category": "technical",
+      "name": "Redis",
+      "level": "intermediate"
+    },
+    {
+      "category": "technical",
+      "name": "ClickHouse",
+      "level": "intermediate"
+    },
+    {
+      "category": "technical",
+      "name": "SpringBoot",
+      "level": "intermediate"
+    },
+    {
+      "category": "technical",
+      "name": "MyBatis",
+      "level": "intermediate"
+    },
+    {
+      "category": "technical",
+      "name": "MyBatisPlus",
+      "level": "intermediate"
+    },
+    {
+      "category": "technical",
+      "name": "SpringCloud",
+      "level": "intermediate"
+    },
+    {
+      "category": "technical",
+      "name": "OpenFeign",
+      "level": "intermediate"
+    },
+    {
+      "category": "technical",
+      "name": "Redisson",
+      "level": "intermediate"
+    },
+    {
+      "category": "technical",
+      "name": "RabbitMQ",
+      "level": "intermediate"
+    },
+    {
+      "category": "technical",
+      "name": "Linux",
+      "level": "intermediate"
+    },
+    {
+      "category": "technical",
+      "name": "Docker",
+      "level": "intermediate"
+    },
+    {
+      "category": "technical",
+      "name": "Netty",
+      "level": "intermediate"
+    },
+    {
+      "category": "technical",
+      "name": "XXL-JOB",
+      "level": "intermediate"
+    },
+    {
+      "category": "technical",
+      "name": "策略+责任链模式",
+      "level": "intermediate"
+    },
+    {
+      "category": "technical",
+      "name": "高并发处理",
+      "level": "intermediate"
+    },
+    {
+      "category": "technical",
+      "name": "分布式系统",
+      "level": "intermediate"
+    }
+  ],
+  "created_at": "2025-08-09T10:32:04.957662",
+  "updated_at": "2025-08-09T10:32:04.957662"
+}

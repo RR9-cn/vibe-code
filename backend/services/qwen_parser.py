@@ -197,10 +197,22 @@ class QwenResumeParser:
             
             # 构建个人信息
             personal_info_data = parsed_data.get('personal_info', {})
+            
+            # 清理电话号码（限制长度，移除无效字符）
+            phone = personal_info_data.get('phone')
+            if phone and len(phone) > 20:
+                # 提取数字和常见分隔符
+                import re
+                cleaned_phone = re.sub(r'[^\d\-\+\(\)\s]', '', phone)
+                if len(cleaned_phone) > 20:
+                    # 如果还是太长，只取前20位
+                    cleaned_phone = cleaned_phone[:20]
+                phone = cleaned_phone if cleaned_phone else None
+            
             personal_info = PersonalInfo(
                 name=personal_info_data.get('name', ''),
                 email=personal_info_data.get('email') or None,  # 避免空字符串导致验证失败
-                phone=personal_info_data.get('phone'),
+                phone=phone,
                 location=personal_info_data.get('location'),
                 summary=personal_info_data.get('summary'),
                 linkedin=personal_info_data.get('linkedin'),
