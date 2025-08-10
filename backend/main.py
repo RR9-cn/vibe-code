@@ -6,6 +6,11 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
+# 导入API路由
+from backend.api.upload import router as upload_router
+from backend.api.parse import router as parse_router
+from backend.api.website import router as website_router
+
 # 创建FastAPI应用实例
 app = FastAPI(
     title="个人简历网站生成器",
@@ -21,6 +26,11 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+# 注册API路由
+app.include_router(upload_router)
+app.include_router(parse_router)
+app.include_router(website_router)
 
 @app.get("/")
 async def root():
