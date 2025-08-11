@@ -27,6 +27,14 @@ const router = createRouter({
       meta: {
         title: '解析简历 - 个人简历网站生成器'
       }
+    },
+    {
+      path: '/preview',
+      name: 'preview',
+      component: () => import('@/views/WebsitePreviewView.vue'),
+      meta: {
+        title: '网站预览 - 个人简历网站生成器'
+      }
     }
   ]
 })
