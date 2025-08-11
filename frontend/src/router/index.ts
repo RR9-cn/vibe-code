@@ -19,6 +19,14 @@ const router = createRouter({
       meta: {
         title: '上传简历 - 个人简历网站生成器'
       }
+    },
+    {
+      path: '/parse/:uploadId',
+      name: 'parse',
+      component: () => import('@/views/ParseView.vue'),
+      meta: {
+        title: '解析简历 - 个人简历网站生成器'
+      }
     }
   ]
 })

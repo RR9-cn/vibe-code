@@ -1,0 +1,55 @@
+=== 简历解析报告 ===
+
+PDF文件: D:\面试\简历\java开发工程师_陈俊杰.pdf
+解析时间: 2025-08-11 10:56:06
+使用模型: qwen-turbo
+
+个人信息:
+  姓名: 陈俊杰
+  邮箱: 152677645501183294441@qq.com
+  电话: 15267764550118329444
+  地址: 杭州
+
+工作经历 (3项):
+  1. 浙江清大视光科技有限公司 - java开发工程师
+     时间: 2023-03 至 2023-11
+     技术: SpringBoot, MyBatis, MyBatisPlus, SpringCloud, OpenFeign, Redisson, RabbitMQ, Redis, MySQL
+
+  2. 温州市鹿城区中津科技研究院 - java开发工程师
+     时间: 2022-02 至 2023-03
+     技术: SpringBoot, MyBatis, ClickHouse, Redis, MySQL
+
+  3. 数字东阳技术运营有限公司 - java开发工程师（全时实习）
+     时间: 2021-03 至 2022-01
+     技术: SpringBoot, MyBatis, Redis, MySQL
+
+教育背景 (1项):
+  1. 浙江广厦建设职业技术大学 - 本科
+     专业: 软件工程
+     时间: 2022-02 至 2022-02
+
+技能列表 (19项):
+  技术技能:
+    - Java (SkillLevel.ADVANCED)
+    - SpringBoot (SkillLevel.ADVANCED)
+    - MyBatis (SkillLevel.ADVANCED)
+    - MyBatisPlus (SkillLevel.ADVANCED)
+    - SpringCloud (SkillLevel.ADVANCED)
+    - OpenFeign (SkillLevel.ADVANCED)
+    - Redisson (SkillLevel.ADVANCED)
+    - RabbitMQ (SkillLevel.ADVANCED)
+    - Redis (SkillLevel.ADVANCED)
+    - MySQL (SkillLevel.ADVANCED)
+    - ClickHouse (SkillLevel.ADVANCED)
+    - Linux (SkillLevel.BEGINNER)
+    - Docker (SkillLevel.BEGINNER)
+    - JVM (SkillLevel.INTERMEDIATE)
+    - Arthas (SkillLevel.INTERMEDIATE)
+    - Netty (SkillLevel.INTERMEDIATE)
+    - XXL-JOB (SkillLevel.INTERMEDIATE)
+    - 高并发处理 (SkillLevel.INTERMEDIATE)
+    - 分布式系统 (SkillLevel.INTERMEDIATE)
+
+质量评估:
+  完整性评分: 100.00%
+  验证状态: 通过

@@ -1,0 +1,81 @@
+{
+  "stats": {
+    "personal_info": {
+      "name": "陈俊杰",
+      "email": "152677645501183294441@qq.com",
+      "phone": "15267764550118329444",
+      "location": "杭州",
+      "has_summary": true,
+      "has_linkedin": false,
+      "has_github": true,
+      "has_website": true
+    },
+    "work_experience": {
+      "count": 3,
+      "companies": [
+        "浙江清大视光科技有限公司",
+        "温州市鹿城区中津科技研究院",
+        "数字东阳技术运营有限公司"
+      ],
+      "positions": [
+        "java开发工程师",
+        "java开发工程师",
+        "java开发工程师（全时实习）"
+      ],
+      "has_technologies": 3
+    },
+    "education": {
+      "count": 1,
+      "institutions": [
+        "浙江广厦建设职业技术大学"
+      ],
+      "degrees": [
+        "本科"
+      ],
+      "has_gpa": 0
+    },
+    "skills": {
+      "count": 19,
+      "by_category": {
+        "technical": 19
+      },
+      "by_level": {
+        "advanced": 11,
+        "beginner": 2,
+        "intermediate": 6
+      },
+      "names": [
+        "Java",
+        "SpringBoot",
+        "MyBatis",
+        "MyBatisPlus",
+        "SpringCloud",
+        "OpenFeign",
+        "Redisson",
+        "RabbitMQ",
+        "Redis",
+        "MySQL",
+        "ClickHouse",
+        "Linux",
+        "Docker",
+        "JVM",
+        "Arthas",
+        "Netty",
+        "XXL-JOB",
+        "高并发处理",
+        "分布式系统"
+      ]
+    }
+  },
+  "validation": {
+    "is_valid": true,
+    "warnings": [],
+    "errors": [],
+    "completeness_score": 1.0
+  },
+  "metadata": {
+    "pdf_file": "D:\\面试\\简历\\java开发工程师_陈俊杰.pdf",
+    "parsing_time": "20250811_105606",
+    "api_model": "qwen-turbo"
+  }
+}

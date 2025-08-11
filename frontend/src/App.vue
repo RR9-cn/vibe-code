@@ -1,11 +1,15 @@
 <template>
   <div id="app" class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-    <!-- 应用主容器 -->
-    <RouterView />
+    <!-- 应用布局容器 -->
+    <AppLayout>
+      <RouterView />
+    </AppLayout>
   </div>
 </template>
 
 <script setup lang="ts">
+import AppLayout from '@/components/layout/AppLayout.vue'
+
 // Vue 3 Composition API 设置
 // 这里可以添加全局的应用逻辑
 </script>
